@@ -3,6 +3,7 @@ import AboutMe from '@/components/AboutMe'
 import Education from '@/components/Education'
 import Profile from '@/components/Profile'
 import Projects from '@/components/Projects'
+import Experience from '@/components/Experience'
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
                 <div className='ml-auto w-1/2 flex flex-col space-y-10'>
                     <AboutMe />
                     <Education />
+                    <Experience />
                     <Projects />
                 </div>            
             </div>
