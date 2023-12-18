@@ -1,9 +1,9 @@
-.aboutMe-h1 {
+.projects-h3 {
     @apply text-white text-2xl font-bold;
 }
-.aboutMe-p {
+.projects-p {
     @apply text-white;
 }
-.aboutMe-wrapper {
+.projects-wrapper {
     @apply flex flex-col space-y-5;
 }

@@ -20,10 +20,10 @@ button:hover {
     @apply border-solid border-2 border-b-indigo-600 text-indigo-400;    
 }
 h3 {
-    @apply text-2xl
+    @apply text-2xl;
 }
 p {
-    @apply text-lg
+    @apply text-base font-normal;
 }
 
 

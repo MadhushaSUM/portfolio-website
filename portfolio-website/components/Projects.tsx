@@ -1,9 +1,9 @@
-import '@/app/Projects.css'
+import '@/css/Projects.css'
 
 const Projects = () => {
     return (
         <div className='projects-wrapper'>
-            <h1 className='projects-h1'>Education</h1>
+            <h3 className='projects-h3'>Projects</h3>
             <p className='projects-p'>
                 It is a long established fact that a reader will be distracted by 
                 the readable content of a page when looking at its layout. The 

@@ -1,22 +1,25 @@
-import React from 'react'
-import '@/app/Education.css'
+import '@/css/Education.css'
+import EducationTile from './EducationTile'
 
 const Education = () => {
     return (
         <div className='education-wrapper'>
-            <h1 className='education-h1'>Education</h1>
-            <p className='education-p'>
-                It is a long established fact that a reader will be distracted by 
-                the readable content of a page when looking at its layout. The 
-                point of using Lorem Ipsum is that it has a more-or-less normal 
-                distribution of letters, as opposed to using 'Content here, content 
-                here', making it look like readable English. Many desktop 
-                publishing packages and web page editors now use Lorem Ipsum as 
-                their default model text, and a search for 'lorem ipsum' will 
-                uncover many web sites still in their infancy. Various versions 
-                have evolved over the years, sometimes by accident, sometimes on 
-                purpose (injected humour and the like).
-            </p>
+            <h3 className='education-h3'>Education</h3>
+            <EducationTile 
+                timePeriod='2021 - Present'
+                organization='University of Moraruwa' 
+                details='The University of Moratuwa is the most popular technical university 
+                in Sri Lanka. I qualified for admission based on my A/L results. Currently, 
+                I am studying in the Department of Electrical Engineering.'
+            />
+            <EducationTile 
+                timePeriod='2011 - 2019'
+                organization='Telijjawila Central Collage' 
+                details='I qualified to enter Telijjawila Central College after the Grade 5 
+                    scholarship exam, where I completed both my O/Ls and A/Ls. I pursued the 
+                    physical science stream and sat for the A/Ls in 2019. I ranked 17th (New 
+                    Syllabus) in the Matara District, and my z-score was 2.511.'
+            />
         </div>
     )
 }
