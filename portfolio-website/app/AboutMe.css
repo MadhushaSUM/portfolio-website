@@ -1,0 +1,9 @@
+.aboutMe-h1 {
+    @apply text-white text-2xl font-bold;
+}
+.aboutMe-p {
+    @apply text-white;
+}
+.aboutMe-wrapper {
+    @apply flex flex-col space-y-5;
+}

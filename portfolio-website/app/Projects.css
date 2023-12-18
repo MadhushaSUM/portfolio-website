@@ -1,0 +1,9 @@
+.projects-h1 {
+    @apply text-white text-2xl font-bold;
+}
+.projects-p {
+    @apply text-white;
+}
+.projects-wrapper {
+    @apply flex flex-col space-y-5;
+}
