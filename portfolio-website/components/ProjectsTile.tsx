@@ -1,7 +1,7 @@
-import { ExperienceTileParams } from "@/app/types"
-import '@/css/EducationTile.css'
+import { ProjectsTileParams } from '@/app/types'
+import TagBar from './TagBar'
 
-const ExperienceTile = ({ timePeriod, organization, details }: ExperienceTileParams) => {
+const ProjectsTile = ({ timePeriod, projectName, details, tagTexts = [] }: ProjectsTileParams) => {
     return (
         <div className='glass-card p-5'>
             <div className='flex flex-row'>
@@ -12,15 +12,16 @@ const ExperienceTile = ({ timePeriod, organization, details }: ExperienceTilePar
                 </div>
                 <div className='w-3/4 flex flex-col space-y-5'>
                     <p>
-                        <b>{organization}</b>
+                        <b>{projectName}</b>
                     </p>
                     <p>
                         {details}
                     </p>
+                    <TagBar tagTexts={tagTexts} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default ExperienceTile
+export default ProjectsTile

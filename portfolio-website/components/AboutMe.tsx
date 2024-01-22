@@ -1,9 +1,8 @@
-import React from 'react'
 import '@/css/AboutMe.css'
 
 const AboutMe = () => {
     return (
-        <div className='aboutMe-wrapper'>
+        <div id='aboutme-section' className='aboutMe-wrapper'>
             <h3 className='aboutMe-h3'>About Me</h3>
             <p className='aboutMe-p'>
                 Embarking on my journey to become a software engineer, I unearthed my passion 

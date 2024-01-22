@@ -3,6 +3,7 @@ import '@/css/EducationTile.css'
 
 const EducationTile = ({timePeriod, organization, details}: EducationTileParams) => {
     return (
+        <div className='glass-card p-5'>
         <div className='flex flex-row'>
             <div className='w-1/4'>
                 <p>
@@ -17,6 +18,7 @@ const EducationTile = ({timePeriod, organization, details}: EducationTileParams)
                     {details}
                 </p>
             </div>
+        </div>
         </div>
     )
 }

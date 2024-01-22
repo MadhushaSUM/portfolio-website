@@ -8,3 +8,15 @@ export interface ExperienceTileParams {
     organization: string, 
     details: string,
 }
+export interface ProjectsTileParams {
+    timePeriod: string,
+    projectName: string, 
+    details: string,
+    tagTexts: string[],
+}
+export interface TagParams {
+    text: string
+}
+export interface TagBarParams {
+    tagTexts: string[]
+}

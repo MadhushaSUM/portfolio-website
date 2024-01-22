@@ -12,7 +12,7 @@ export default function Home() {
             <div className='background' />
             <NavBar />
             <div className='w-4/5 mx-auto flex flex-col mt-10'>
-                <div className='w-2/5 fixed'>
+                <div className='w-2/5 h-4/5 fixed'>
                     <Profile />
                 </div>
                 <div className='ml-auto w-1/2 flex flex-col space-y-10'>
@@ -20,6 +20,13 @@ export default function Home() {
                     <Education />
                     <Experience />
                     <Projects />
+                    
+                    <div className='py-20 text-white flex justify-center'>
+                        Inspired by&nbsp;
+                        <a className='hover:text-slate-400' href='https://brittanychiang.com/'>
+                            Brittany Chiang's website
+                        </a>. 
+                    </div>                    
                 </div>            
             </div>
         </div>
