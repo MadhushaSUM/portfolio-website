@@ -1,0 +1,11 @@
+h2 {
+    @apply text-2xl font-bold my-5 text-white;
+}
+button {
+    @apply font-bold w-fit border-2 border-transparent;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+button:hover {
+    @apply border-solid border-2 border-b-indigo-600 text-indigo-400;    
+}
