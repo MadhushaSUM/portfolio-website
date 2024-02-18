@@ -1,8 +1,9 @@
+import AboutMe from "../AboutMe"
 import SearchBar from "./SearchBar"
 
 const RightPanel = () => {
     return (
-        <div className="w-2/5 border-l-2 flex flex-col pl-5">
+        <div className="border-l-2 flex flex-col pl-5 h-full">
             <h2>Search</h2>
             <SearchBar />
 
@@ -15,9 +16,7 @@ const RightPanel = () => {
             </button>
             <button className="mb-2">
                 Technology
-            </button>
-
-            
+            </button>       
         </div>
     )
 }

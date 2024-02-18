@@ -20,3 +20,9 @@ export interface TagParams {
 export interface TagBarParams {
     tagTexts: string[]
 }
+export interface PostPrevParams {
+    flipped: boolean,
+    imageURL: string,
+    header: string,
+    content: string
+}
