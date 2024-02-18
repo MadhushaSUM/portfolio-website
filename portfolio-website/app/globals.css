@@ -9,7 +9,7 @@ body {
     @apply h-screen;
 }
 .background {
-    @apply bg-gradient-to-tr from-stone-900 to-indigo-900 bg-no-repeat h-screen w-screen fixed start-0 left-0;
+    @apply bg-gradient-to-tr from-stone-900 to-indigo-900 bg-no-repeat h-screen w-screen fixed start-0 left-0 -z-10;
 }
 button {
     @apply font-bold w-36 border-2 border-transparent;

@@ -15,6 +15,7 @@ export default function Home() {
                 <div className='w-2/5 h-4/5 fixed'>
                     <Profile />
                 </div>
+                
                 <div className='ml-auto w-1/2 flex flex-col space-y-10'>
                     <AboutMe />
                     <Education />
