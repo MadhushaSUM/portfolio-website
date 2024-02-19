@@ -26,3 +26,9 @@ export interface PostPrevParams {
     header: string,
     content: string
 }
+export interface Post {
+    id: number,
+    header: string,
+    content: string,
+    imageURL: string
+}
