@@ -1,9 +1,8 @@
 import { Post } from '@/app/types';
 import Posts from '@/data/BlogPosts';
-import { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export function GET(req: NextApiRequest, { params } : any) {
+export function GET(req: NextRequest, { params } : any) {
     const { postId } = params;
 
     const filteredPosts = Posts.filter((post: Post, index: number) => {

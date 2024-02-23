@@ -1,3 +1,4 @@
+
 import Posts from '@/data/BlogPosts';
 import { NextResponse } from 'next/server';
 

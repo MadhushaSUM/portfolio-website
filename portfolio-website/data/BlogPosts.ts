@@ -4,7 +4,7 @@ const Posts: Post[]= [
     {
         id: 0,
         imageURL: '/JavaScript-image.jpg',
-        header: 'JavaScript',
+        header: 'JavaScript for back-end',
         content: 'JavaScript is a versatile and dynamic programming language primarily used for web development. Initially created to add interactivity to web pages, it has evolved into a full-fledged language capable of building complex web applications, server-side applications, and even mobile applications. '           
     },
     {
