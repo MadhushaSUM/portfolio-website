@@ -22,9 +22,7 @@ export interface TagBarParams {
 }
 export interface PostPrevParams {
     flipped: boolean,
-    imageURL: string,
-    header: string,
-    content: string
+    post: Post
 }
 export interface Post {
     id: number,

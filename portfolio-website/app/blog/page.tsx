@@ -25,9 +25,7 @@ export default async function page() {
                 return (
                     <PostPreview
                         key={post.id}
-                        header={post.header}
-                        content={post.content}
-                        imageURL={post.imageURL}
+                        post={post}
                         flipped={post.id % 2 == 1}
                     />
                 )

@@ -19,6 +19,12 @@ const Posts: Post[]= [
         header: 'Unreal Engine 5',
         content: 'Unreal Engine 5 represents a significant leap forward in game development technology, offering groundbreaking features like Nanite, which allows for the rendering of massive amounts of geometric detail with minimal performance impact.'          
     },
+    {
+        id: 3,
+        imageURL: '/nextjs.png',
+        header: 'Wada da',
+        content: 'AAAAAAAA'          
+    },
 ]
 
 export default Posts;
