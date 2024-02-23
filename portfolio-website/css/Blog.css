@@ -1,6 +1,9 @@
 h2 {
     @apply text-2xl font-bold my-5 text-white;
 }
+p {
+    @apply text-white;
+}
 button {
     @apply font-bold w-fit border-2 border-transparent;
     font-family: 'Source Code Pro', monospace;
