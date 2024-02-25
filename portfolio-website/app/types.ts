@@ -38,5 +38,6 @@ export interface Post {
     author: string,
     brief: string,
     tags: string[],
+    topic: string,
     contentArray: PostContentItem[]
 }

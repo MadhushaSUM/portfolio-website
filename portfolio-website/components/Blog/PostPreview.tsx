@@ -12,8 +12,8 @@ export default function PostPreview({ flipped, post }: Readonly<PostPrevParams>)
     }
 
     return (
-        <div className={`flex ${flipped ? 'flex-row-reverse' : 'flex-row'} glass-card p-5`}>
-            <div className="ring-1 w-1/2 relative mx-2">
+        <div className={`flex ${flipped ? 'flex-row-reverse' : 'flex-row'} glass-card p-5 gap-5`}>
+            <div className="ring-1 w-1/2 relative">
                 <Image
                     src={post.previewImageURL}
                     alt='post thumbnail'
@@ -22,8 +22,8 @@ export default function PostPreview({ flipped, post }: Readonly<PostPrevParams>)
                 />
             </div>
 
-            <div className="w-1/2 flex flex-col mx-2">
-                <h2>{post.title}</h2>
+            <div className="w-1/2 flex flex-col gap-2">
+                <h2 className="m-0">{post.title}</h2>
                 <p className="text-white line-clamp-4">{ post.brief }</p>
                 <button className="ring-1 rounded-lg p-1 mt-2" onClick={handleClick}>Read More</button>
             </div>

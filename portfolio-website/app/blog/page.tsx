@@ -18,7 +18,7 @@ export default async function page() {
 
 
     return (
-        <div className='flex flex-col mr-5'>
+        <div className='flex flex-col mr-5 gap-5'>
             <h2>Recent Posts</h2>
 
             {posts.map((post: Post, index: number) => {
