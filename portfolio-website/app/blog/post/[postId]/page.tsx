@@ -2,6 +2,8 @@ import { Post } from '@/app/types';
 import '../../../../css/Blog.css';
 import Image from 'next/image';
 import PostBody from '@/components/Blog/PostBody';
+import PostDetails from '@/components/Blog/PostDetailes';
+import TagBar from '@/components/TagBar';
 
 async function GetPost(postId: number) {
     const response = await fetch(`http://localhost:3000/api/posts/${postId}`, {
@@ -17,8 +19,11 @@ export default async function singlePost({ params }: { params: { postId: number 
     const post = response.data as Post;
 
     return (
-        <div className='flex flex-col mr-5 gap-5'>
-            <h2>{post.title}</h2>
+        <div className='flex flex-col mr-5 gap-10'>
+            <div>
+                <h2>{post.title}</h2>
+                <TagBar tagTexts={post.tags}/>
+            </div>
             <div className="ring-1 p-5">
                 <Image
                     src={post.previewImageURL}
@@ -29,6 +34,8 @@ export default async function singlePost({ params }: { params: { postId: number 
                     style={{ width: '100%', height: 'auto' }} // optional
                 />
             </div>
+            <PostDetails Author={post.author} CreatedDate={post.createdDate}/>
+            
             <PostBody contentArray={post.contentArray}/>
         </div>
     )

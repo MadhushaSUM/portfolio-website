@@ -19,3 +19,10 @@ button {
 button:hover {
     @apply border-solid border-2 border-b-indigo-600 text-indigo-400;    
 }
+
+.PostDetails {
+    @apply text-blue-600/50 italic;
+}
+.PostDetailsValues {
+    @apply text-blue-400/50 italic;
+}

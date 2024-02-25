@@ -37,5 +37,6 @@ export interface Post {
     createdDate: string,
     author: string,
     brief: string,
+    tags: string[],
     contentArray: PostContentItem[]
 }

@@ -9,6 +9,7 @@ const Posts: Post[] = [
         author: "Madhusha Laksitha",
         createdDate: "2024-02-25",
         previewImageURL: "/Default_Blender_3D_graphics_software_for_game_development_thum_2.jpg",
+        tags: ["#Blender", "#GameDev", "#UnrealEngine", "#Unity"],
         contentArray: [
             {
                 type: PostContentItemTypes.BOLD_ITALIC,
