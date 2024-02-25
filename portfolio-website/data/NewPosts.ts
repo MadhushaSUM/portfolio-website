@@ -44,14 +44,8 @@ const Posts: Post[] = [
                 data: "Another notable aspect of Blender for game development is its texture painting and material creation capabilities. Game assets often require detailed textures and materials to achieve visual fidelity. Blender's texture painting tools allow developers to paint directly onto 3D models, adding intricate details such as scratches, weathering, and surface imperfections. Additionally, Blender's node-based material editor facilitates the creation of complex shaders and material effects, enabling developers to achieve stunning visual effects and realistic lighting in their games."
             },
             {
-                type: PostContentItemTypes.PARAGRAPH_BREAK
-            },
-            {
                 type: PostContentItemTypes.SUB_HEADER,
                 data: "Compatibility with Game Engines"
-            },
-            {
-                type: PostContentItemTypes.PARAGRAPH_BREAK
             },
             {
                 type: PostContentItemTypes.TEXT,

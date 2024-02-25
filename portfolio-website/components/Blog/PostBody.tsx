@@ -6,7 +6,10 @@ function GetContentItem(contentItem: Readonly<PostContentItem>) {
     if (contentItem.type == PostContentItemTypes.SUB_HEADER) {
         
         return (
-            <h3>{ contentItem.data }</h3>
+            <div>
+                <br />
+                <h3>{ contentItem.data }</h3>
+            </div>
         )
     }
     else if (contentItem.type == PostContentItemTypes.TEXT) {
