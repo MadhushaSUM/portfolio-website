@@ -26,7 +26,7 @@ export default async function page() {
                     <PostPreview
                         key={post.id}
                         post={post}
-                        flipped={post.id % 2 == 1}
+                        flipped={index % 2 == 1}
                     />
                 )
             })}
