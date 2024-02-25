@@ -1,9 +1,11 @@
-
-import Posts from '@/data/BlogPosts';
+import Posts from '@/data/NewPosts';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+
+    const first_posts = Posts.slice(0,5);
+
     return NextResponse.json({
-        data: Posts
+        data: first_posts
     });
 }

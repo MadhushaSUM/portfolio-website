@@ -1,8 +1,15 @@
 h2 {
     @apply text-2xl font-bold my-5 text-white;
 }
+h3 {
+    @apply text-xl font-bold my-5 text-white;
+}
 p {
     @apply text-white;
+}
+span {
+    @apply text-white;
+    white-space: pre-wrap;
 }
 button {
     @apply font-bold w-fit border-2 border-transparent;

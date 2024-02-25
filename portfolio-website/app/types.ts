@@ -1,3 +1,5 @@
+import { PostContentItemTypes } from "./enums"
+
 export interface EducationTileParams {
     timePeriod: string,
     organization: string, 
@@ -24,9 +26,16 @@ export interface PostPrevParams {
     flipped: boolean,
     post: Post
 }
+export interface PostContentItem {
+    type: PostContentItemTypes,
+    data?: string
+}
 export interface Post {
     id: number,
-    header: string,
-    content: string,
-    imageURL: string
+    title: string,
+    previewImageURL: string,
+    createdDate: string,
+    author: string,
+    brief: string,
+    contentArray: PostContentItem[]
 }
