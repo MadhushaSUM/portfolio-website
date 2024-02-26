@@ -5,6 +5,7 @@ import '../../../css/Blog.css';
 import { useSearchParams } from 'next/navigation';
 import { Post } from '@/app/types';
 import PostPreview from '@/components/Blog/PostPreview';
+import BreadCrumbs from '@/components/BreadCrumbs';
 
 export default function BlogTopic() {
     const searchParams = useSearchParams();
@@ -44,6 +45,7 @@ export default function BlogTopic() {
 
     return (
         <div className='flex flex-col mr-5'>
+            <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}, {name: `${topic}`, path: `/blog/topic?topic=${topic}`}]}/>
             <h2>{`${topic} Posts`}</h2>
 
             {posts.map((post: Post, index: number) => (

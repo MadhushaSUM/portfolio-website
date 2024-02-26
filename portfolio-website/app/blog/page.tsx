@@ -1,6 +1,7 @@
 import PostPreview from '@/components/Blog/PostPreview';
 import '../../css/Blog.css';
 import { Post } from '../types';
+import BreadCrumbs from '@/components/BreadCrumbs';
 
 async function getRecentPosts() {
     const response = await fetch('http://localhost:3000/api/posts/recents', {
@@ -19,6 +20,7 @@ export default async function page() {
 
     return (
         <div className='flex flex-col mr-5 gap-5'>
+            <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}]}/>
             <h2>Recent Posts</h2>
 
             {posts.map((post: Post, index: number) => {
