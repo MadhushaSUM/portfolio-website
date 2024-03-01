@@ -17,6 +17,28 @@ export function GET(req: NextRequest, res: NextResponse) {
                 posts.push(post);
             }
         }
+    } else if (searchby.toLowerCase() === 'all') {
+        for (const post of Posts) {
+            // Search Title
+            if (post.title.toLowerCase().includes(query.toLowerCase())) {
+                posts.push(post);
+                continue;
+            }
+            
+            // Search Tags
+            if (post.tags.includes(`#${query}`)) {
+                posts.push(post);
+                continue;
+            }
+
+            // Search body
+            for (const item of post.contentArray) {
+                if (item.data?.toLowerCase().includes(query.toLowerCase())) {
+                    posts.push(post);
+                    break;
+                }
+            }
+        }
     }
 
     return NextResponse.json(

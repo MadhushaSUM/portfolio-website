@@ -3,7 +3,6 @@ import '../../../../css/Blog.css';
 import Image from 'next/image';
 import PostBody from '@/components/Blog/PostBody';
 import PostDetails from '@/components/Blog/PostDetailes';
-import TagBar from '@/components/TagBar';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import PostTagBar from '@/components/Blog/PostTagBar';
 

@@ -1,10 +1,19 @@
+import { useBlogSearchContext } from "@/context/BlogSearchContext"
+import { ChangeEvent } from "react";
+import { useRouter } from "next/navigation";
 
-const SearchBar = () => {
+export default function SearchBar(){
+    const router = useRouter();
+    const { searchText, setSearchText } = useBlogSearchContext();
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchText(event.target.value);
+        router.push('/blog/search?searchby=all');
+    }
+
     return (
-        <div className="w-fit rounded-full ring-1 px-5 text-white/50 font-thin italic">
-            Search keywords, tags, and topics
+        <div>
+            <input onChange={handleChange} type="text" placeholder="Search keywords, tags, and topics" className="w-fit rounded-full ring-1 px-5 text-white font-thin italic bg-transparent"/>
         </div>
     )
 }
-
-export default SearchBar

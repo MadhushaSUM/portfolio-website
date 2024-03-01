@@ -41,3 +41,8 @@ export interface Post {
     topic: string,
     contentArray: PostContentItem[]
 }
+
+export interface BlogSearchContextType {
+    searchText: string;
+    setSearchText: (searchText: string) => void;
+}
