@@ -58,7 +58,7 @@ export default function SearchResults() {
 
     return (
         <div className='flex flex-col mr-5'>
-            <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}, {name: `Search Results: ${query}`, path: `/blog/search?searchby=${searchby}&query=${query}`}]}/>
+            <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}, {name: `Search Results: ${query ?? searchText}`, path: `/blog/search?searchby=${searchby}&query=${query}`}]}/>
             <h2>{ searchby === 'tag' ? `Search Results for: #${query}` : `Search Results for: ${searchText}`}</h2>
 
             {posts && posts.map((post: Post, index: number) => (
