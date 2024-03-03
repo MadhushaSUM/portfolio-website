@@ -43,8 +43,8 @@ export default function BlogTopic() {
     const [posts, setPosts] = useState<Post[]>([]);
 
     const fetchPosts = async () => {
-        try {
-            const response = await fetch(`http://localhost:3000/api/posts/topic?topic=${topic}`);
+        try {            
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/topic?topic=${topic}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch posts');
             }

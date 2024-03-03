@@ -50,7 +50,7 @@ export default function SearchResults() {
     const fetchPosts = async () => {
         try {
             if (searchby === 'tag') {
-                const response = await fetch(`http://localhost:3000/api/posts/search?searchby=${searchby}&query=${query}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/search?searchby=${searchby}&query=${query}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');
                 }
@@ -61,7 +61,7 @@ export default function SearchResults() {
                     router.push('/blog');
                 }
 
-                const response = await fetch(`http://localhost:3000/api/posts/search?searchby=${searchby}&query=${searchText}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/search?searchby=${searchby}&query=${searchText}`);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');

@@ -7,7 +7,7 @@ import BreadCrumbs from '@/components/BreadCrumbs';
 import PostTagBar from '@/components/Blog/PostTagBar';
 
 async function GetPost(postId: number) {
-    const response = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${postId}`, {
         method: "GET"
     });
 

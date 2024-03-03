@@ -34,7 +34,7 @@ function getPageBody( posts: Post[]) {
 }
 
 async function getRecentPosts() {
-    const response = await fetch('http://localhost:3000/api/posts/recents', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/recents`, {
         method: "GET",
     });
 
