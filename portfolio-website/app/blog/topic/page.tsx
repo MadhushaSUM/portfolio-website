@@ -49,7 +49,7 @@ export default function BlogTopic() {
                 throw new Error('Failed to fetch posts');
             }
             const data = await response.json();
-            return JSON.parse(data).data;
+            return data.data;
         } catch (error) {
             console.error('Error fetching posts:', error);
             return [];

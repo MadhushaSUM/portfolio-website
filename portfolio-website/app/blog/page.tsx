@@ -3,6 +3,7 @@ import '../../css/Blog.css';
 import { Post } from '../types';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import Image from 'next/image';
+import RecentPosts from '@/app/api/posts/recents/RecentPosts'
 
 function getPageBody( posts: Post[]) {
     if (posts) {
@@ -34,20 +35,13 @@ function getPageBody( posts: Post[]) {
 }
 
 async function getRecentPosts() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/recents`, {
-        method: "GET",
-    });
-
-    const posts = await response.json();
-    console.log(posts);    
-        
-    return JSON.parse(posts);
+   return RecentPosts();    
 }
 
 export default async function page() {
 
     const response = await getRecentPosts();
-    const posts = response.data;
+    const posts = response;
 
 
     return (

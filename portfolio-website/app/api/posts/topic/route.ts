@@ -6,7 +6,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
         return post.topic === req.nextUrl.searchParams.get("topic")
     });
     
-    return NextResponse.json(JSON.stringify({
+    return NextResponse.json({
         data: filteredPosts
-    }));
+    });
 }
