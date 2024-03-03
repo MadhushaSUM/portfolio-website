@@ -10,22 +10,24 @@ export default function Home() {
     return (
         <div>
             <div className='background' />
-            <NavBar />
-            <div className='w-4/5 mx-auto flex flex-col mt-10'>
-                <div className='w-2/5 h-4/5 fixed'>
+            <div className='hidden sm:block'>
+                <NavBar />
+            </div>
+            <div className='w-4/5 mx-auto flex flex-col pt-10'>
+                <div className='sm:w-2/5 sm:h-4/5 sm:fixed'>
                     <Profile />
                 </div>
                 
-                <div className='ml-auto w-1/2 flex flex-col space-y-10'>
+                <div className='sm:ml-auto sm:w-1/2 flex flex-col gap-5 mt-5 sm:mt-0'>
                     <AboutMe />
                     <Education />
                     <Experience />
                     <Projects />
                     
-                    <div className='py-20 text-white flex justify-center'>
-                        Inspired by&nbsp;
+                    <div className='py-20 text-white flex justify-center gap-1'>
+                        <span>Inspired by</span>
                         <a className='hover:text-slate-400' href='https://brittanychiang.com/'>
-                            Brittany Chiang's website
+                            {`Brittany Chiang's website`}
                         </a>. 
                     </div>                    
                 </div>            

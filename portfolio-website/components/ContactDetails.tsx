@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const ContactDetails = () => {
     return (
-        <div className="flex justify-start items-center space-x-5">
+        <div className="flex justify-start items-center gap-5 mt-5 sm:mt-0">
             <a
                 className="block"
                 target='_blank'

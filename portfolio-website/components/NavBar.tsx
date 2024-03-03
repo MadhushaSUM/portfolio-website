@@ -26,11 +26,11 @@ const NavBar = () => {
 
     return (
         <div className='navbar'>
-            <button onClick={(e) => handleButtonClick(e, 'aboutme-section')}>01. About Me</button>
-            <button onClick={(e) => handleButtonClick(e, 'education-section')}>02. Education</button>
-            <button onClick={(e) => handleButtonClick(e, 'experience-section')}>03. Experience</button>
-            <button onClick={(e) => handleButtonClick(e, 'projects-section')}>04. Projects</button>
-            <button onClick={gotoBlog}>05. Blog</button>
+            <button onClick={(e) => handleButtonClick(e, 'aboutme-section')}>About Me</button>
+            <button onClick={(e) => handleButtonClick(e, 'education-section')}>Education</button>
+            <button onClick={(e) => handleButtonClick(e, 'experience-section')}>Experience</button>
+            <button onClick={(e) => handleButtonClick(e, 'projects-section')}>Projects</button>
+            <button onClick={gotoBlog}>Blog</button>
         </div>
     )
 }

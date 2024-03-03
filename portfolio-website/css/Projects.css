@@ -5,5 +5,5 @@
     @apply text-white;
 }
 .projects-wrapper {
-    @apply flex flex-col space-y-5;
+    @apply flex flex-col sm:gap-5;
 }
