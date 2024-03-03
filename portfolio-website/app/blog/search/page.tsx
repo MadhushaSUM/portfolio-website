@@ -7,6 +7,36 @@ import { Post } from '@/app/types';
 import PostPreview from '@/components/Blog/PostPreview';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import { useBlogSearchContext } from '@/context/BlogSearchContext';
+import Image from 'next/image';
+
+function getPageBody( posts: Post[]) {
+    if (posts) {
+        if (posts.length === 0) {
+            return (
+                <div className='flex flex-col items-center'>
+                    <Image src='/no-data.png' width={100} height={100} alt='no-data image'/>
+                    <p className=''>
+                        Sorry No data :/
+                    </p>
+                </div>
+            )
+        } else {
+            return ( posts.map((post: Post, index: number) => (
+                <PostPreview
+                  key={post.id}
+                  post={post}
+                  flipped={index % 2 === 1}
+                />
+            )))
+        }        
+    } else {
+        return (
+            <div>
+                <p>Empty Query</p>
+            </div>
+        )
+    }
+}
 
 export default function SearchResults() {
     const searchParams = useSearchParams();
@@ -48,7 +78,7 @@ export default function SearchResults() {
                 // Error handling is done in fetchPosts function
             }
         };
-    
+
         if (searchby) {
             fetchData();
         } else {
@@ -58,16 +88,11 @@ export default function SearchResults() {
 
     return (
         <div className='flex flex-col mr-5'>
-            <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}, {name: `Search Results: ${query ?? searchText}`, path: `/blog/search?searchby=${searchby}&query=${query}`}]}/>
-            <h2>{ searchby === 'tag' ? `Search Results for: #${query}` : `Search Results for: ${searchText}`}</h2>
-
-            {posts && posts.map((post: Post, index: number) => (
-                <PostPreview
-                    key={post.id}
-                    post={post}
-                    flipped={index % 2 === 1}
-                />
-            ))}
+          <BreadCrumbs pathArr={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: `Search Results: ${query ?? searchText}`, path: `/blog/search?searchby=${searchby}&query=${query}` }]} />
+          <h2>{searchby === 'tag' ? `Search Results for: #${query}` : `Search Results for: ${searchText}`}</h2>
+      
+          {getPageBody(posts)}
         </div>
-    )
+      );
+      
 }
