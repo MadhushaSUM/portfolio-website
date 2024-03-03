@@ -5,19 +5,15 @@ import PostBody from '@/components/Blog/PostBody';
 import PostDetails from '@/components/Blog/PostDetailes';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import PostTagBar from '@/components/Blog/PostTagBar';
+import GetPostById from '@/app/api/posts/GetPost'
 
 async function GetPost(postId: number) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${postId}`, {
-        method: "GET"
-    });
-
-    const post = await response.json();
-    return post;
+    return await GetPostById(postId);
 }
 
 export default async function singlePost({ params }: { params: { postId: number } }) {
     const response = await GetPost(params.postId);
-    const post = response.data as Post;
+    const post = response as Post;
 
     return (
         <div className='flex flex-col sm:mr-5 gap-10'>
