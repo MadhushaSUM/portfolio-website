@@ -74,7 +74,7 @@ export default function BlogTopic() {
     }, [topic]);
 
     return (
-        <div className='flex flex-col mr-5'>
+        <div className='flex flex-col sm:mr-5'>
             <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}, {name: `${topic}`, path: `/blog/topic?topic=${topic}`}]}/>
             <h2>{`${topic} Posts`}</h2>
 

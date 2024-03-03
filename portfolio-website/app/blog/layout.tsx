@@ -20,7 +20,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                 </div>
 
                 <div className='w-4/5 flex flex-row mx-auto sm:pt-16 pb-16'>
-                    
                     <div className='sm:w-2/3'>
                         {children}
                     </div>

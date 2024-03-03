@@ -7,12 +7,12 @@ import { useRouter } from "next/navigation";
 export default function RightPanel() {
     const router = useRouter();
 
-    const handleClicks = (e) => {
-        router.push("/blog/topic?topic="+e.target.name);          
-    }
+    const handleClicks = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        router.push("/blog/topic?topic="+e.currentTarget.name);          
+    }  
 
     return (
-        <div className="border-l-2 flex flex-col sm:pl-5 h-full items-center sm:items-start">
+        <div className="flex flex-col sm:pl-5 h-full items-center sm:items-start">
             <h2>Search</h2>
             <SearchBar />
 
