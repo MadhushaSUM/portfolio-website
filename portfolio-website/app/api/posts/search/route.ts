@@ -41,9 +41,9 @@ export function GET(req: NextRequest, res: NextResponse) {
         }
     }
 
-    return NextResponse.json(
+    return NextResponse.json(JSON.stringify(
         {
             data: posts
         }
-    );
+    ));
 }

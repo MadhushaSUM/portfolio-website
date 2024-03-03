@@ -5,7 +5,7 @@ export async function GET() {
 
     const first_posts = Posts.slice(0,5);
 
-    return NextResponse.json({
-        data: first_posts
-    });
+    return NextResponse.json(JSON.stringify({
+        data: first_posts   
+    }));
 }

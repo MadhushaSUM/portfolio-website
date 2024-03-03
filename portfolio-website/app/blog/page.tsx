@@ -39,7 +39,8 @@ async function getRecentPosts() {
     });
 
     const posts = await response.json();
-    return posts;
+        
+    return JSON.parse(posts);
 }
 
 export default async function page() {

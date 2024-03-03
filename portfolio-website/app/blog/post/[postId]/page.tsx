@@ -12,7 +12,7 @@ async function GetPost(postId: number) {
     });
 
     const post = await response.json();
-    return post;
+    return JSON.parse(post);
 }
 
 export default async function singlePost({ params }: { params: { postId: number } }) {

@@ -13,7 +13,7 @@ export function GET(req: NextRequest, { params } : any) {
         return NextResponse.json("No Data");
     }
 
-    return NextResponse.json({
+    return NextResponse.json(JSON.stringify({
         data: filteredPosts[0]
-    })
+    }))
 }
