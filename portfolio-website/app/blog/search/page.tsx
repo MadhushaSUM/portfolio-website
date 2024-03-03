@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import '../../../css/Blog.css';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Post } from '@/app/types';
 import PostPreview from '@/components/Blog/PostPreview';
 import BreadCrumbs from '@/components/BreadCrumbs';
@@ -10,6 +10,7 @@ import { useBlogSearchContext } from '@/context/BlogSearchContext';
 import Image from 'next/image';
 
 function getPageBody( posts: Post[]) {
+    const router = useRouter();
     if (posts) {
         if (posts.length === 0) {
             return (
@@ -44,6 +45,7 @@ export default function SearchResults() {
     const query = searchParams.get('query');
     const [posts, setPosts] = useState<Post[]>([]);
     const { searchText, setSearchText } = useBlogSearchContext();
+    const router = useRouter();
 
 
     const fetchPosts = async () => {
@@ -56,7 +58,12 @@ export default function SearchResults() {
                 const data = await response.json();
                 return data.data;
             } else {
+                if (searchText === '') {
+                    router.push('/blog');
+                }
+
                 const response = await fetch(`http://localhost:3000/api/posts/search?searchby=${searchby}&query=${searchText}`);
+
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');
                 }
@@ -71,7 +78,7 @@ export default function SearchResults() {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
+            try {                
                 const fetchedPosts = await fetchPosts();
                 setPosts(fetchedPosts);
             } catch (error) {
