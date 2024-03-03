@@ -39,6 +39,7 @@ async function getRecentPosts() {
     });
 
     const posts = await response.json();
+    console.log(posts);    
         
     return JSON.parse(posts);
 }
