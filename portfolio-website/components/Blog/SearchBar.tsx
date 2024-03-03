@@ -14,7 +14,7 @@ export default function SearchBar(){
 
     return (
         <div>
-            <input onChange={debounce(handleChange, 1000)} type="text" placeholder="Search keywords, tags, and topics" className="w-fit rounded-full ring-1 px-5 text-white font-thin italic bg-transparent"/>
+            <input onChange={debounce(handleChange, 1000)} type="text" placeholder="Search keywords, tags, and topics" className="w-fit rounded-full ring-1 px-5 text-white font-thin italic bg-transparent sm:text-base text-sm"/>
         </div>
     )
 }

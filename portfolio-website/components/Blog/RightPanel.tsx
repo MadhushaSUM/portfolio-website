@@ -12,7 +12,7 @@ export default function RightPanel() {
     }
 
     return (
-        <div className="border-l-2 flex flex-col pl-5 h-full">
+        <div className="border-l-2 flex flex-col sm:pl-5 h-full items-center sm:items-start">
             <h2>Search</h2>
             <SearchBar />
 

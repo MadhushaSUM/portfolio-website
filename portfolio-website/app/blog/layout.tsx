@@ -10,17 +10,21 @@ export const metadata: Metadata = {
     description: 'Madhusha Laksitha\'s portfolio website',
 }
 
-export default function RootLayout({ children, }: { children: React.ReactNode }) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
     return (
         <BlogSearchContextProvider>
             <div className={inter.className}>
                 <div className='background' />
+                <div className='block sm:hidden'>
+                    <RightPanel />
+                </div>
 
-                <div className='w-4/5 flex flex-row mx-auto pt-16 pb-16'>
-                    <div className='w-2/3'>
+                <div className='w-4/5 flex flex-row mx-auto sm:pt-16 pb-16'>
+                    
+                    <div className='sm:w-2/3'>
                         {children}
                     </div>
-                    <div className='w-1/3'>
+                    <div className='w-1/3 hidden sm:block'>
                         <div className='fixed h-5/6'>
                             <RightPanel />
                         </div>

@@ -1,5 +1,5 @@
 h2 {
-    @apply text-2xl font-bold my-5 text-white;
+    @apply text-lg sm:text-2xl font-bold sm:my-5 my-2 text-white;
 }
 h3 {
     @apply text-xl font-bold my-5 text-white;
@@ -12,7 +12,7 @@ span {
     white-space: pre-wrap;
 }
 button {
-    @apply font-bold w-fit border-2 border-transparent;
+    @apply font-bold w-fit border-2 border-transparent sm:text-base text-sm;
     font-family: 'Source Code Pro', monospace;
     color: white;
 }

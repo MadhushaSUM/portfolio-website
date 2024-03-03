@@ -49,7 +49,7 @@ function GetContentItem(contentItem: Readonly<PostContentItem>) {
 
             return (
                 <div>
-                    <div className="ring-1 p-5">
+                    <div className="ring-1 p-2">
                         <Image
                             src={ contentItem.data }
                             alt='Post image'

@@ -11,6 +11,9 @@ export default function Profile(){
                     seamlessly balancing creativity and technical prowess
                     for a harmonious user experience.
                 </ p>
+                <div className="sm:hidden block text-base font-normal">
+                    <a href="/blog"><span>{`Visit my blog ->`}</span></a>                    
+                </div>
             </div>
             <ContactDetails />
         </div>

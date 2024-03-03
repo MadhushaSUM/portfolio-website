@@ -49,7 +49,7 @@ export default async function page() {
 
 
     return (
-        <div className='flex flex-col mr-5 gap-5'>
+        <div className='flex flex-col sm:mr-5 gap-5'>
             <BreadCrumbs pathArr={[{name: "Home", path: "/"}, {name: "Blog", path: "/blog"}]}/>
             <h2>Recent Posts</h2>
 

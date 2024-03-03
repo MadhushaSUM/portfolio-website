@@ -26,7 +26,7 @@ export default function Home() {
                     
                     <div className='py-20 text-white flex justify-center gap-1'>
                         <span>Inspired by</span>
-                        <a className='hover:text-slate-400' href='https://brittanychiang.com/'>
+                        <a className='hover:text-slate-400' target='_blank' href='https://brittanychiang.com/'>
                             {`Brittany Chiang's website`}
                         </a>. 
                     </div>                    

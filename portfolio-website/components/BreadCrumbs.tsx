@@ -1,7 +1,7 @@
 
 export default function BreadCrumbs({ pathArr }: { pathArr: {name: string, path: string}[] }) {
     return (
-        <div>
+        <div className="flex flex-wrap">
             {pathArr.map( (dir, index) => {
                 return (
                     <span key={index}>
