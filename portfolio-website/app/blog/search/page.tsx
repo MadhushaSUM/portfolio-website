@@ -10,7 +10,6 @@ import { useBlogSearchContext } from '@/context/BlogSearchContext';
 import Image from 'next/image';
 
 function getPageBody( posts: Post[]) {
-    const router = useRouter();
     if (posts) {
         if (posts.length === 0) {
             return (
